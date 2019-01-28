@@ -140,18 +140,6 @@ check_root(){
 	fi
 }
 
-setup_ubuntu(){
-	if [ "$DISTRIB_RELEASE" == "14.04" ]
-	then
-		REQUIRED="openjdk-7-jdk jflex libswt-gtk-3-java-gcj libswt-gtk-3-java libjna-java libjna-java mariadb-server-5.5 libmysql-java git gawk g++ python-dev python-setuptools"
-		export CLASSPATH=$CLASSPATH:/usr/share/ant/lib/jflex.jar
-		export JAVAHOME=java-7-openjdk-amd64
-		export SWTJAR=/usr/share/java/swt.jar
-		export JNAJAR=/usr/share/java/jna.jar
-		export JDBCJAR=/usr/share/java/mysql-connector-java.jar
-	else
-	        exit_failure "Currently only Ubuntu 14.04 supported" $OSVERSIONNOTSUPPORTED
-	fi
 }
 
 check_linux_version(){
